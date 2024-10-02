@@ -1,7 +1,21 @@
+import React from 'react';
+import {ReactComponent as Logo} from './Logo.svg'
 
-function Nav() {
+export function Nav() {
     return(
-        <img src='./Logo.svg' alt='Little Lemon'/>
+        <nav>
+            <img src={Logo} alt="Little Lemon" />
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/menu">Menu</a></li>
+                <li><a href="/reservations">Reservations</a></li>
+                <li><a href="/orderonline">Order Online</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
     );
+    
 }
-export default Nav;
+
+

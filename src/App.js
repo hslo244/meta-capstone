@@ -1,10 +1,13 @@
 import './App.css';
+import {Header} from './Header.js';
+import {Nav} from './Nav.js'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Homepage</h1>
-    </div>
+    <>
+      <Header/>
+      <Nav/>
+    </>
   );
 }
 

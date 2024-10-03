@@ -4,7 +4,7 @@ import {ReactComponent as Logo} from './Logo.svg'
 export function Nav() {
     return(
         <nav>
-            <img src={Logo} alt="Little Lemon" />
+            <Logo alt="Little Lemon" />
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>

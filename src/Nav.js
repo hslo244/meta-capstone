@@ -3,15 +3,15 @@ import {ReactComponent as Logo} from './Logo.svg'
 
 export function Nav() {
     return(
-        <nav>
-            <Logo alt="Little Lemon" />
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/menu">Menu</a></li>
-                <li><a href="/reservations">Reservations</a></li>
-                <li><a href="/orderonline">Order Online</a></li>
-                <li><a href="/login">Login</a></li>
+        <nav class='navbar'>
+            <Logo style={{marginTop: '1rem'}}alt="Little Lemon" />
+            <ul class="navbar">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li><a href="/menu">MENU</a></li>
+                <li><a href="/reservations">RESERVATIONS</a></li>
+                <li><a href="/orderonline">ORDER ONLINE</a></li>
+                <li><a href="/login">LOGIN</a></li>
             </ul>
         </nav>
     );

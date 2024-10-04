@@ -63,4 +63,11 @@ nav.navbar {
   margin-left: 5em;
   margin-right: 1em;
   background-color: white;
+  align-items:center;
+  justify-content: center;
+}
+
+header {
+  background-color: white;
+  
 }

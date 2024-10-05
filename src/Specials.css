@@ -1,3 +1,26 @@
 div.specials {
     background:white;
+    height: 400px;
+}
+
+h1.specials {
+    margin-left: 5rem;
+    margin-top: 4rem;
+    position: relative;
+    top: 0.8em;
+}
+
+button {
+    float: right;
+    background-color: #C3A512;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 21px;
+    font-family: 'Karla', 'Tahoma';
+    font-size: 1.9em;
+    font-stretch: expanded;
+    margin-right: 2em;
+    margin-top: -2em;
+    width: 10em;
 }

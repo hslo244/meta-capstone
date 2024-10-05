@@ -6,6 +6,7 @@ body {
     margin-left: 10rem;
     margin-top: 4rem;
     color: white;
+    font-family: 'Markazi Text', 'Verdana';
 }
 
 h1 {
@@ -20,6 +21,7 @@ p {
 p.intro {
     margin-right: .1em;
     width: 40rem;
+    font-family: 'Karla', 'Tahoma';
 }
 
 h1.intro {
@@ -29,4 +31,5 @@ h1.intro {
 
 h2.intro {
     margin-top: 0;
+    
 }

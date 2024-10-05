@@ -1,6 +1,8 @@
 import { CallToAction } from './CallToAction';
 import {Specials} from './Specials';
-import {App} from './App.js';
+import { BookingPage } from './BookingPage';
+import { BrowserRouter as Router,
+    Route, Routes, Link } from "react-router-dom";
 import './Main.css';
 
 export function Main() {
@@ -8,10 +10,7 @@ export function Main() {
         <>
             <CallToAction/>
             <Specials/>
-            {/* <Routes> 
-                <Route path="/" element={<App />}></Route>
-                <Route path="/booking" element={<BookingPage />}></Route>
-            </Routes> */}
+            
         </>
     );
 }

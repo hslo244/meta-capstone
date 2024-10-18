@@ -7,7 +7,6 @@ import { CustomersSay } from './CustomersSay';
 import './Main.css';
 
 export function Main() {
-    
     return(
         <>
             <CallToAction/>

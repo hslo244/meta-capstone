@@ -1,7 +1,7 @@
 
 
 
-export function BookingPage({availableTimes}) {
+export function BookingPage({availableTimes, updateTimes}) {
     
 
     
@@ -10,7 +10,7 @@ export function BookingPage({availableTimes}) {
             <h1>Booking Page</h1>
             <form style={{display: 'grid', maxWidth: '200px', gap: '20px'}}>
                 <label htmlFor="res-date">Choose date</label>
-                <input type="date" id="res-date"/>
+                <input type="date" id="res-date" onChange={updateTimes}/>
                 <label htmlFor="res-time">Choose time</label>
                 <select id="res-time ">
                 {availableTimes.map((time, index) => (

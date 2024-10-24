@@ -6,57 +6,36 @@ import { BrowserRouter as Router,
   Route, Routes } from "react-router-dom";
 import {BookingPage} from './BookingPage';
 import {Homepage} from './Homepage'
-import { useState, useEffect } from 'react';
-import { useReducer } from 'react';
+import { useState} from 'react';
+// import { useReducer } from 'react';
+import { ConfirmedBooking } from './ConfirmedBooking.js';
+import { SubmitForm } from './submitForm.js';
+import { fetchAPI } from './api.js';
+
 
 /*Init reducer */
-const reducer = (state,action) => {
+// const reducer = (state,action) => {
 
-};
+// };
 
 // Main function
 function App() {
-
+  const [date, setDate] = useState(new Date());
   /*Init state for time selector */
-  const initializeTimes = {time: '00:00'};
-  useEffect(() => { 
-    fetch(Date) 
-      .then((response) => response.json()) 
-      .then((jsonData) => updateTimes(jsonData)); 
-      // .catch((error) => console.log(error)); 
-  }, []); 
   
-  const [state, dispatch] = useReducer(reducer, initializeTimes);
-
+  function initializeTimes(date) {
+    return fetchAPI(date)
+  }
+  
   // Update times based on selected date
-  const updateTimes = (selectedDate) => {
-    console.log(`Date selected: ${selectedDate}`);
-    
-    setAvailableTimes([
-      '09:00 AM',
-      '10:00 AM',
-      '11:00 AM',
-      '12:00 PM',
-      '01:00 PM',
-      '02:00 PM',
-      '03:00 PM',
-      '04:00 PM',
-      '05:00 PM',
-    ]);
-    dispatch({type: 'update_times'});
-  };
+  function updateTimes(date) {
+    const newDate = new Date(date)
+    return fetchAPI(newDate)
+  }
 
   /*Options for the time selector*/
-  const [availableTimes, setAvailableTimes] = useState([
-    '17:00',
-    '18:00',
-    '19:00',
-    '20:00',
-    '21:00',
-    '22:00',
-  ]);
+  const [availableTimes, setAvailableTimes] = useState(initializeTimes(date));
   
-
   return (
     <>
       {/* <Header/> */}
@@ -65,8 +44,9 @@ function App() {
       <>
         <Nav />
         <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/booking" element={<BookingPage availableTimes={availableTimes} setAvailableTimes={setAvailableTimes} updateTimes={updateTimes}/>} />
+          <Route path="/" element={<Homepage />} aria-label='Home'/>
+          <Route path="/booking" element={<BookingPage submitForm={SubmitForm} availableTimes={availableTimes} setAvailableTimes={setAvailableTimes} updateTimes={updateTimes}/>} />
+          <Route path="/confirmed" element={<ConfirmedBooking/>}/>
         </Routes>
       </>
     </Router>

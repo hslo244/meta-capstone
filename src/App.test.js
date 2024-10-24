@@ -1,12 +1,14 @@
 import { render, screen } from '@testing-library/react';
 // import App from './App';
-import BookingForm from './BookingForm';
+import BookingPage from './BookingPage';
+initializeTimes = initializeTimes()
+const timesElement = require('./BookingPage')
 
-test('renders bookingform heading', () => {
-  render(<BookingForm />);
-  const headingElement = screen.getByText("Booking Page");
-  expect(headingElement).toBeInTheDocument();
-});
+// test('renders bookingform heading', () => {
+//   render(<BookingPage />);
+//   const headingElement = screen.getByText("Booking Page");
+//   expect(headingElement).toBeInTheDocument();
+// });
 
 // test("Adds one", () => {
 //   // render the App component
@@ -26,6 +28,5 @@ test('renders bookingform heading', () => {
 // });
 
 test('initializing times', () => {
-  render(<BookingForm />);
-  const timesElement = screen.getByText("Book Now");
+  expect(initializeTimes()).toBe('9:00AM');
 });

@@ -6,7 +6,7 @@ export function Specials() {
         <>
             <div class="specials">
                 <h1 class="specials">Specials</h1>
-                <button type="button">Click Me</button>
+                <button type="menu1">Online Menu</button>
                 <div class='showcase'>
                     <div class='item'>
                         <img src={Dessert} alt='Dessert' class="itemImg"/>

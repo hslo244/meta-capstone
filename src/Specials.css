@@ -1,6 +1,7 @@
 div.specials {
     background:white;
     height: 1200px;
+    position: absolute;
 }
 
 h1.specials {
@@ -11,9 +12,8 @@ h1.specials {
 }
 
 button {
-    float: right;
     background-color: #C3A512;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 10px 20px;
     border: none;
     border-radius: 21px;
@@ -24,6 +24,15 @@ button {
     margin-top: -2em;
     width: 10em;
 }
+
+button {
+    float: right;
+}
+
+/* button:hover {
+    color: white;
+    background-color: black;
+} */
 
 div.item {
     width: 24rem;

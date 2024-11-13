@@ -11,6 +11,7 @@ import { useState} from 'react';
 import { ConfirmedBooking } from './ConfirmedBooking.js';
 import { SubmitForm } from './submitForm.js';
 import { fetchAPI } from './api.js';
+import { Header } from './Header.js';
 
 
 /*Init reducer */
@@ -43,6 +44,8 @@ function App() {
       <Router>
       <>
         <Nav />
+        <Header />
+        {/* Routes */}
         <Routes>
           <Route path="/" element={<Homepage />} aria-label='Home'/>
           <Route path="/booking" element={<BookingPage submitForm={SubmitForm} availableTimes={availableTimes} setAvailableTimes={setAvailableTimes} updateTimes={updateTimes}/>} />

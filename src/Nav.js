@@ -2,6 +2,7 @@ import React from 'react';
 import {ReactComponent as Logo} from './Logo.svg';
 import { BrowserRouter as Router,
     Route, Routes, Link } from "react-router-dom";
+import './Nav.css';
 
 export function Nav() {
     return(

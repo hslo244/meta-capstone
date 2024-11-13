@@ -1,0 +1,59 @@
+/* Header.css */
+@media (max-width: 1100px) {
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media (min-width: 1100px) {
+    .mobile-header {
+        display: none;
+    }
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: calc(100vh - 50px);
+    width: 100%;
+}
+
+ul.mobile-menu {
+    padding: .3rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    list-style-type: none;
+    height: 1rem;
+}
+
+.mobile-menu li {
+    margin: 1rem;
+    color: white !important;
+    background-color: #ffffff;
+    padding: 1rem;
+}

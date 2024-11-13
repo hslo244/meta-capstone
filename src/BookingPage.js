@@ -26,7 +26,7 @@ export function BookingPage({availableTimes, updateTimes}) {
     
     return(
         <>
-            <h1>Booking Page</h1>
+            <h1 class="booking">Booking Page</h1>
             <form style={{display: 'grid', maxWidth: '200px', gap: '20px'}} onSubmit={handleSubmit}>
                 <label htmlFor="res-date">Choose date</label>
                 <input type="date" id="res-date" onChange={updateTimes}/>

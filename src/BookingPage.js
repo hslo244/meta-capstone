@@ -1,5 +1,6 @@
 // Imports
 import {useNavigate} from "react-router-dom";
+import './BookingPage.css';
 
 export function BookingPage({availableTimes, updateTimes}) {
     const navigate = useNavigate(); //Init navigate

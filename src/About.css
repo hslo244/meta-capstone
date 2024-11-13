@@ -1,0 +1,23 @@
+section.about {
+    background-color: white;
+    margin-top:-4rem;
+    padding-top: 0%;
+    position: relative;
+}
+
+div.about {
+    margin-left: 3rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div.aboutImg {
+    display:flex;
+}
+
+img.aboutImg {
+    width: 30rem;
+    margin-left: 1rem;
+    margin-right: 3rem;
+}

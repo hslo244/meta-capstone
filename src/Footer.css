@@ -3,3 +3,9 @@ footer {
     align-items: center;
     justify-content: space-around;
 }
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

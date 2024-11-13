@@ -15,14 +15,17 @@ export function Header() {
             <img src={ReactLogo} alt="React Logo" className="logo"/>
             <div className="menu-icon" onClick={toggleMobileMenu}>
                 &#9776;
-                <ul className="mobile-menu">
-                    <li><Link to="/">HOME</Link></li>
-                    <li><Link to="/about">ABOUT</Link></li>
-                    <li><Link to="/menu">MENU</Link></li>
-                    <li><Link to="/booking">RESERVATIONS</Link></li>
-                    <li><Link to="/orderonline">ORDER ONLINE</Link></li>
-                    <li><Link to="/login">LOGIN</Link></li>
-                </ul>
+                <div className='mobile-menu'>
+                    <ul className="mobile-menu">
+                        <li><Link to="/">HOME</Link></li>
+                        <li><Link to="/about">ABOUT</Link></li>
+                        <li><Link to="/menu">MENU</Link></li>
+                        <li><Link to="/booking">RESERVATIONS</Link></li>
+                        <li><Link to="/orderonline">ORDER ONLINE</Link></li>
+                        <li><Link to="/login">LOGIN</Link></li>
+                    </ul>
+                </div>
+                
             </div>
         </header>
     );

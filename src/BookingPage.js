@@ -1,35 +1,45 @@
 // Imports
 import {useNavigate} from "react-router-dom";
 import './BookingPage.css';
+import { fetchAPI, submitAPI } from "./api";
 
 export function BookingPage({availableTimes, updateTimes}) {
-    const navigate = useNavigate(); //Init navigate
+    
+    const navigate = useNavigate();
 
-    const handleSubmit = (formData) => {
-        formData.preventDefault();
-        console.log('Form submitted!');  //Logs submission in console
-        navigate("/confirmed");  // Go to booking confirmation page
-        const submitAPI = function(formData) {
-            return true;
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const data = {
+            date: formData.get('res-date'),
+            time: formData.get('res-time'),
+            guests: formData.get('guests'),
+            occasion: formData.get('occasion')
         };
-        try {
-            // Call the submitAPI function and pass formData
-            const response = submitAPI(formData);
-            
-            console.log('Form successfully submitted:', response);
-            navigate('/confirmed');
-        } catch (e) {
-            console.log('Error submitting form:');
+
+        const response = await submitAPI(data);
+        if (response.success) {
+            navigate('/confirmation');
+        } else {
+            alert('There was an error with your reservation. Please try again.');
         }
     };
 
-    
+    function initializeTimes(date) {
+        return fetchAPI(date)
+    }
+
+    function updateTimes(date) {
+        const newDate = new Date(date)
+        return fetchAPI(newDate)
+    }
+
     return(
         <>
             <h1 class="booking">Booking Page</h1>
             <form style={{display: 'grid', maxWidth: '200px', gap: '20px'}} onSubmit={handleSubmit}>
                 <label htmlFor="res-date">Choose date</label>
-                <input type="date" id="res-date" onChange={updateTimes}/>
+                <input type="date" id="res-date" name="res-date" required />
                 <label htmlFor="res-time">Choose time</label>
                 <select id="res-time ">
                 {availableTimes.map((time, index) => (
@@ -39,7 +49,7 @@ export function BookingPage({availableTimes, updateTimes}) {
           ))}
                 </select>
                 
-                <label for="guests">Number of guests</label>
+                <label for="guests" required>Number of guests</label>
                 <input type="number" placeholder="1" min="1" max="10" id="guests"/>
                 
                 <label htmlFor="occasion">Occasion</label>

@@ -12,3 +12,70 @@ button.reserve {
     margin-top: -2em;
     width: 10em;
 }
+
+.intro {
+    margin-left: 10rem;
+    margin-top: 4rem;
+    color: white;
+    font-family: 'Markazi Text', 'Verdana';
+}
+
+h1 {
+    font-size: 4em;
+}
+
+p {
+    font-size: 2em;
+    text-align: left;
+}
+
+p.intro {
+    margin-right: .1em;
+    width: 40rem;
+    font-family: 'Karla', 'Tahoma';
+}
+
+h1.intro {
+    color: #C3A512;
+    margin-bottom: 1rem;
+}
+
+h2.intro {
+    margin-top: 0;
+    
+}
+
+@media (max-width: 768px) {
+    button.reserve {
+        float: none;
+        width: 100%;
+        margin: 1em 0;
+        font-size: 1.5em;
+    }
+
+    .intro {
+        margin: 2rem 1rem;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+
+    p.intro {
+        width: 100%;
+        margin: 0;
+    }
+
+    h1.intro {
+        font-size: 3em;
+    }
+
+    h2.intro {
+        font-size: 2em;
+    }
+}

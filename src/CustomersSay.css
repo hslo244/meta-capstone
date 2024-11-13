@@ -49,3 +49,48 @@ img.placeImg {
 div.nestedPerson {
     display:flex;
 }
+
+@media (max-width: 768px) {
+    div.testim {
+        height: auto;
+        margin-top: 0rem;
+        padding-top: 5%;
+    }
+
+    div.testim2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1.testim {
+        font-size: 2rem;
+        padding-top: 10%;
+        padding-bottom: 8%;
+    }
+
+    p.person, p.rating {
+        font-size: 1.5ch;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    h2.person {
+        margin-left: 1rem;
+    }
+
+    div.person {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        width: 100%;
+    }
+
+    img.placeImg {
+        width: 8rem;
+        margin-left: 0;
+    }
+
+    div.nestedPerson {
+        flex-direction: column;
+        align-items: center;
+    }
+}

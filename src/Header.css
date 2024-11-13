@@ -7,6 +7,7 @@
         padding: 1rem;
         background-color: #ffffff;
         color: rgb(0, 0, 0);
+        z-index:1;
     }
 }
 
@@ -19,6 +20,7 @@
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    z-index:1;
 }
 
 .menu-icon {
@@ -36,10 +38,11 @@
 .mobile-menu {
     display: none;
     position: absolute;
-    top: 50px;
+    top: 70px;
     left: 0;
     height: calc(100vh - 50px);
     width: 100%;
+    z-index:2;
 }
 
 ul.mobile-menu {
@@ -48,12 +51,19 @@ ul.mobile-menu {
     text-align: center;
     color: white;
     list-style-type: none;
+    /* background-color: #ffffff; */
     height: 1rem;
 }
 
 .mobile-menu li {
-    margin: 1rem;
+    margin: .5rem;
     color: white !important;
     background-color: #ffffff;
     padding: 1rem;
+}
+
+div.mobile-menu {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+
 }

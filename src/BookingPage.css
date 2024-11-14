@@ -32,6 +32,19 @@ label {
     color: #ffffff;
 }
 
+.submit {
+    margin-bottom: 20px;
+    color: #333;
+    margin-top: 0em;
+    /* left:70%;
+    right: 50%;
+    position:relative; */
+}
+
+/* div.submit {
+    left: 70%;
+} */
+
 input[type="text"],
 input[type="email"],
 input[type="date"],

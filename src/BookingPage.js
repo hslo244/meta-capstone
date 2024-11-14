@@ -1,64 +1,48 @@
 // Imports
-import {useNavigate} from "react-router-dom";
 import './BookingPage.css';
-import { fetchAPI, submitAPI } from "./api";
+import { fetchAPI } from "./api";
+import React, { useState } from "react";
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
-export function BookingPage({availableTimes, updateTimes}) {
-    
-    const navigate = useNavigate();
+export function BookingPage() {
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        const formData = new FormData(event.target);
-        const data = {
-            date: formData.get('res-date'),
-            time: formData.get('res-time'),
-            guests: formData.get('guests'),
-            occasion: formData.get('occasion')
-        };
+    // const [newDate, setNewDate] = useState('');
+    // const [newTime, setNewTime] = useState('');
+    // const [guests, setGuests] = useState('');
+    // const [occasion, setOccasion] = useState('');
 
-        const response = await submitAPI(data);
-        if (response.success) {
-            navigate('/confirmation');
-        } else {
-            alert('There was an error with your reservation. Please try again.');
-        }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const payload = Object.fromEntries(formData)
+        console.log(payload);
     };
-
-    function initializeTimes(date) {
-        return fetchAPI(date)
-    }
-
-    function updateTimes(date) {
-        const newDate = new Date(date)
-        return fetchAPI(newDate)
-    }
 
     return(
         <>
             <h1 class="booking">Booking Page</h1>
-            <form style={{display: 'grid', maxWidth: '200px', gap: '20px'}} onSubmit={handleSubmit}>
-                <label htmlFor="res-date">Choose date</label>
-                <input type="date" id="res-date" name="res-date" required />
-                <label htmlFor="res-time">Choose time</label>
-                <select id="res-time ">
-                {availableTimes.map((time, index) => (
-                    <option key={index} value={time}>
-                        {time}
-                    </option>
-          ))}
-                </select>
-                
-                <label for="guests" required>Number of guests</label>
-                <input type="number" placeholder="1" min="1" max="10" id="guests"/>
-                
-                <label htmlFor="occasion">Occasion</label>
-                
-                <select id="occasion">
-                    <option>Birthday</option>
-                    <option>Anniversary</option>
-                </select>
-                <input type="submit" value="Make Your reservation"/>
+            <form onSubmit={handleSubmit}>
+                <Form.Group className='mb-3'>
+                    <label>Date</label>
+                    <input type='date' name='date' required/>
+                </Form.Group>
+                <Form.Group className='mb-3'>
+                    <label>Time</label>
+                    <input type='time' name='time' required/>
+                </Form.Group>
+                <Form.Group className='mb-3'>
+                    <label>Guests</label>
+                    <input type='number' name='guests' min='1' max='4' required/>
+                </Form.Group>
+                <label>Occasion</label>
+                <Form.Select aria-label="Default select example">
+                    <option value="1">Birthday</option>
+                    <option value="2">Anniversary</option>
+                </Form.Select>
+                <div className='submit'>
+                    <Button type="submit" variant="primary" className='submit'>Submit</Button>
+                </div>
             </form>
         </>
     );

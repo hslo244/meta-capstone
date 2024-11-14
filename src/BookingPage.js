@@ -1,48 +1,42 @@
-// Imports
-import './BookingPage.css';
-import { fetchAPI } from "./api";
 import React, { useState } from "react";
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import { Form, Button } from 'react-bootstrap';
+import './BookingPage.css';
 
-export function BookingPage() {
-
-    // const [newDate, setNewDate] = useState('');
-    // const [newTime, setNewTime] = useState('');
-    // const [guests, setGuests] = useState('');
-    // const [occasion, setOccasion] = useState('');
+export function BookingPage({ availableTimes, updateTimes, onSubmit }) {
+    const [selectedDate, setSelectedDate] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
-        const payload = Object.fromEntries(formData)
-        console.log(payload);
+        const payload = Object.fromEntries(formData);
+        onSubmit(payload);
     };
 
-    return(
+
+    return (
         <>
-            <h1 class="booking">Booking Page</h1>
+            <h1 className="booking">Booking Page</h1>
             <form onSubmit={handleSubmit}>
                 <Form.Group className='mb-3'>
-                    <label>Date</label>
-                    <input type='date' name='date' required/>
+                    <label htmlFor="res-date">Date</label>
+                    <input type='date' id="res-date" name='date' required />
                 </Form.Group>
                 <Form.Group className='mb-3'>
-                    <label>Time</label>
-                    <input type='time' name='time' required/>
+                    <label htmlFor="res-time">Time</label>
+                    <input type='time' id="res-time" name='time' required />
                 </Form.Group>
                 <Form.Group className='mb-3'>
-                    <label>Guests</label>
-                    <input type='number' name='guests' min='1' max='4' required/>
+                    <label htmlFor="res-guests">Guests</label>
+                    <input type='number' id="res-guests" name='guests' min='1' max='4' required />
                 </Form.Group>
-                <label>Occasion</label>
-                <Form.Select aria-label="Default select example">
-                    <option value="1">Birthday</option>
-                    <option value="2">Anniversary</option>
-                </Form.Select>
-                <div className='submit'>
-                    <Button type="submit" variant="primary" className='submit'>Submit</Button>
-                </div>
+                <Form.Group className='mb-3'>
+                    <label htmlFor="res-occasion">Occasion</label>
+                    <Form.Select id="res-occasion" name="occasion" aria-label="Default select example">
+                        <option value="1">Birthday</option>
+                        <option value="2">Anniversary</option>
+                    </Form.Select>
+                </Form.Group>
+                <Button type="submit">Submit</Button>
             </form>
         </>
     );

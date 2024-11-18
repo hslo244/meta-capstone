@@ -11,10 +11,10 @@ button.CTA {
     margin-right: 2em;
     margin-left: 5em;
     /* margin-top: 2em; */
-    width: 10em;
     margin-bottom: 2rem;
     height: 2em;
     width: 10em;
+    margin-top: 3%;
     /* display:inline-block; */
 }
 
@@ -49,6 +49,7 @@ p.intro {
     font-family: 'Karla', 'Tahoma';
     font-size: 2em;
     text-align: left;
+    margin-top: 1%;
 }
 
 h1.intro {
@@ -59,43 +60,44 @@ h1.intro {
 }
 
 h2.intro {
-    margin-top: 0;
-    
+    margin-top: 1%;
 }
 
 @media (max-width: 768px) {
-    button.reserve {
+    button.CTA {
         float: none;
-        width: 100%;
-        margin: 1em 0;
+        width: 75%;
+        display:block;
+        margin: auto;
+        margin-bottom: 6%;
         font-size: 1.5em;
     }
+
 
     .intro {
         margin: 2rem 1rem;
         text-align: center;
     }
 
-    h1 {
-        font-size: 2.5em;
-    }
-
-    p {
-        font-size: 1.5em;
-    }
 
     p.intro {
-        width: 100%;
+        width: 70%;
         margin: 0;
+        /* margin-left: 11%; */
+        text-align: center;
+        margin: auto;
+        font-size: 1.5em;
+        padding-bottom: 3%;
     }
 
     h1.intro {
-        font-size: 3em;
+        font-size: 2.5em;
     }
 
     h2.intro {
         font-size: 2em;
     }
+
 }
 
 @media (max-width: 1300px) {

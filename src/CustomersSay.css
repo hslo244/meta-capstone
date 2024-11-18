@@ -1,9 +1,13 @@
+* {
+    padding: 0px;
+    margin: 0px
+    }
+
 div.testim {
     background:rgb(159, 158, 158);
-    height: 600px;
-    margin-top:77rem;
-    padding-top: 0%;
-    position: relative;
+    height: auto;
+    margin: 0;
+    padding: 0;
 }
 
 div.testim2 {
@@ -35,10 +39,19 @@ h2.person {
 }
 
 div.person {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    /* margin-left: 3rem;
+    margin-right: 3rem; */
+    margin-top: 1%;
     background-color: white;
     width: 15rem;
+    gap: 10%;
+}
+
+div.showcase2 {
+    gap: 5%;
+    width: 100%;
+    margin-left: 6rem;
+    padding-bottom: 2em;
 }
 
 img.placeImg {
@@ -53,7 +66,7 @@ div.nestedPerson {
 @media (max-width: 768px) {
     div.testim {
         height: auto;
-        margin-top: 0rem;
+        margin: auto;
         padding-top: 5%;
     }
 
@@ -81,7 +94,7 @@ div.nestedPerson {
     div.person {
         margin-left: 1rem;
         margin-right: 1rem;
-        width: 100%;
+        width: 70%;
     }
 
     img.placeImg {
@@ -92,5 +105,27 @@ div.nestedPerson {
     div.nestedPerson {
         flex-direction: column;
         align-items: center;
+    }
+
+    /* div.showcase2 {
+        width: 100;
+    } */
+}
+
+@media (max-width: 600px) {
+    div.testim {
+        height: auto;
+        margin: auto;
+        padding-top: 5%;
+    }
+
+    div.person {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        width: 70%;
+    }
+
+    div.showcase2 {
+        width: 65%;
     }
 }

@@ -8,7 +8,7 @@ export function CustomersSay() {
                 <h1 class="testim">Testimonials</h1>
                 {/* <button type="button">Online Menu</button> */}
                 <div class ='testim2'>
-                    <div class='showcase'>
+                    <div class='showcase2'>
                         <div class='person'>
                             <h2 class='person'>Lemon</h2>
                                 <div class='nestedPerson'>

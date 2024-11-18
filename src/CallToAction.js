@@ -17,7 +17,7 @@ export function CallToAction() {
             <img src={Chef1} alt='Banner image' class="bannerImg"/>
         </div>
         <div class="specials">
-            <div>
+            <div class = 'sTitle'>
                 <h1 class="specials">Specials</h1>
                 <Link to='/booking'><button className='menu1'>Menu</button></Link>
             </div>

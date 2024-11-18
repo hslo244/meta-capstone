@@ -1,3 +1,7 @@
 body {
     background-color: #495E57;
 }
+
+.navbar svg {
+    margin-right: 5%;
+}

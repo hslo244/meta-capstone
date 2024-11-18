@@ -1,4 +1,4 @@
-button.reserve {
+button.CTA {
     float: left;
     background-color: #C3A512;
     color: rgb(0, 0, 0);
@@ -9,35 +9,53 @@ button.reserve {
     font-size: 1.9em;
     font-stretch: expanded;
     margin-right: 2em;
-    margin-top: -2em;
+    margin-left: 5em;
+    /* margin-top: 2em; */
     width: 10em;
+    margin-bottom: 2rem;
+    height: 2em;
+    width: 10em;
+    /* display:inline-block; */
 }
 
 .intro {
     margin-left: 10rem;
-    margin-top: 4rem;
     color: white;
     font-family: 'Markazi Text', 'Verdana';
+    z-index: 1;
 }
 
-h1 {
-    font-size: 4em;
+.sTitle {
+    z-index: 1;
 }
 
-p {
-    font-size: 2em;
-    text-align: left;
+.chef {
+    position: absolute;
+    top: 30%;
+    right: 13%;
+    width: 400px;
+    z-index: 2;
+}
+
+.chef img {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
 }
 
 p.intro {
     margin-right: .1em;
     width: 40rem;
     font-family: 'Karla', 'Tahoma';
+    font-size: 2em;
+    text-align: left;
 }
 
 h1.intro {
     color: #C3A512;
     margin-bottom: 1rem;
+    font-size: 4em;
+    margin-top: 4rem;
 }
 
 h2.intro {
@@ -77,5 +95,11 @@ h2.intro {
 
     h2.intro {
         font-size: 2em;
+    }
+}
+
+@media (max-width: 1300px) {
+    .chef {
+        display: none;
     }
 }

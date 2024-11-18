@@ -1,17 +1,28 @@
 div.specials {
     background:white;
     height: 1200px;
-    position: absolute;
+    position: relative;
+    margin: 0;
+}
+
+div.sTitle {
+    display: flex;
+    flex-direction: column;
 }
 
 h1.specials {
     margin-left: 5rem;
     margin-top: 4rem;
-    position: relative;
+    position: static;
     top: 0.8em;
+    font-size: 6em;
+    padding-bottom: 0;
+    padding-top: 3%;
+    margin-bottom: 0em;
+    margin-top: 0%;
 }
 
-button {
+button.menu1 {
     background-color: #C3A512;
     color: rgb(0, 0, 0);
     padding: 10px 20px;
@@ -21,13 +32,23 @@ button {
     font-size: 1.9em;
     font-stretch: expanded;
     margin-right: 2em;
-    margin-top: -2em;
+    margin-top: -1em;
+    margin-bottom: 0%;
     width: 10em;
-}
-
-button {
     float: right;
 }
+
+.item p {
+    font-size: 2em;
+}
+
+.item h1 {
+    font-size: 3em;
+}
+
+/* button {
+    float: right;
+} */
 
 /* button:hover {
     color: white;
@@ -41,9 +62,10 @@ div.item {
     background-color: rgb(204, 200, 200);
     font-size: 10px;
     margin-top: 10rem;
+    flex-wrap: wrap;
 }
 
-div.showcase {
+div.item {
     display: flex;
     align-items: center;
     /* flex: 1 100px; */
@@ -85,5 +107,9 @@ img.itemImg {
 
     img.itemImg {
         width: 100%;
+    }
+    div.item {
+        display: flex;
+        flex: 1 1 100px;
     }
 }

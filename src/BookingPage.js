@@ -9,7 +9,7 @@ export function BookingPage({ availableTimes, updateTimes, onSubmit }) {
         e.preventDefault();
         const formData = new FormData(e.target);
         const payload = Object.fromEntries(formData);
-        onSubmit(payload);
+        console.log(payload);
     };
 
 

@@ -1,12 +1,13 @@
 import './Specials.css';
 import Dessert from './lemon dessert.jpg';
+import { Link } from 'react-router-dom';
 
 export function Specials() {
     return(
         <>
-            <div class="specials">
+            {/* <div class="specials">
                 <h1 class="specials">Specials</h1>
-                <button type="menu1">Online Menu</button>
+                <Link to='/booking'><button className='menu1'>Reserve Now</button></Link>
                 <div class='showcase'>
                     <div class='item'>
                         <img src={Dessert} alt='Dessert' class="itemImg"/>
@@ -27,7 +28,7 @@ export function Specials() {
                     </p>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </>
     );
 }
